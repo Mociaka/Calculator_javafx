@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="604.0" prefWidth="321.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="calculator.controllers.Controller">
+   <children>
+      <Button fx:id="zero" layoutX="22.0" layoutY="539.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="131.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+      <Button fx:id="comma" layoutX="168.0" layoutY="539.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="59.0" style="-fx-background-color: a9a9a9;" text=",">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="equal" layoutX="240.0" layoutY="539.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="59.0" style="-fx-background-color: eab65c;" text="=">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="one" layoutX="22.0" layoutY="476.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="59.0" text="1">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+      <Button fx:id="two" layoutX="94.0" layoutY="476.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="59.0" text="2">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+      <Button fx:id="three" layoutX="168.0" layoutY="476.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="59.0" text="3">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+      <Button fx:id="plus" layoutX="240.0" layoutY="476.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="59.0" style="-fx-background-color: eab65c;" text="+">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="four" layoutX="22.0" layoutY="414.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="59.0" text="4">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+      <Button fx:id="five" layoutX="94.0" layoutY="414.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="59.0" text="5">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+      <Button fx:id="six" layoutX="168.0" layoutY="414.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="59.0" text="6">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+      <Button fx:id="sub" layoutX="240.0" layoutY="414.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="59.0" style="-fx-background-color: eab65c;" text="–">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="seven" layoutX="22.0" layoutY="351.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="59.0" text="7">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+      <Button fx:id="eight" layoutX="94.0" layoutY="351.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="59.0" text="8">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+      <Button fx:id="nine" layoutX="168.0" layoutY="351.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="59.0" text="9">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+      <Button fx:id="multiply" layoutX="240.0" layoutY="351.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="59.0" style="-fx-background-color: eab65c;" text="×">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button layoutX="22.0" layoutY="290.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="59.0" text="π">
+         <font>
+            <Font size="20.0" />
+         </font></Button>
+      <Button layoutX="94.0" layoutY="290.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="59.0" text="X^">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+      <Button layoutX="168.0" layoutY="290.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="59.0" text="√X">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+      <Button fx:id="divide" layoutX="240.0" layoutY="290.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="59.0" style="-fx-background-color: eab65c;" text="÷">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="open_parentheses" layoutX="22.0" layoutY="227.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="59.0" style="-fx-background-color: #2facff;" text="(">
+         <font>
+            <Font size="20.0" />
+         </font></Button>
+      <Button fx:id="close_parentheses" layoutX="94.0" layoutY="227.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="59.0" style="-fx-background-color: #2facff;" text=")">
+         <font>
+            <Font size="20.0" />
+         </font></Button>
+      <Button fx:id="c" layoutX="168.0" layoutY="227.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="59.0" style="-fx-background-color: eab65c;" text="C">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+      <Button fx:id="backSpace" layoutX="240.0" layoutY="227.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="59.0" style="-fx-background-color: d1372a;" text="⌫">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+      <TextArea fx:id="input" layoutX="21.0" layoutY="14.0" prefHeight="107.0" prefWidth="282.0" wrapText="true">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextArea>
+      <TextArea fx:id="output" layoutX="21.0" layoutY="143.0" prefHeight="66.0" prefWidth="282.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextArea>
+   </children>
+</AnchorPane>
