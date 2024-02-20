@@ -1,58 +1,109 @@
 package calculator;
 
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Stack;
+
 public class Lexer {
 
     public static int callmethods(char[] arr){
-        int x  = 0;
-        int i =0;
-        String xOfChar ="";
-        
-
-        for (; i < arr.length ; i++) {
-            if (arr[i] != '+' && arr[i] != '-' && arr[i] != '*' && arr[i] != '/') {
-                xOfChar += arr[i];
-            }
-            else {
-                if (arr[i] == '+'){
-                    char[] temp = cutArray(i,arr); //for debuging
-                    return AdvancedMath.add(Integer.valueOf(xOfChar),temp  );
-                }
-                if (arr[i] == '-'){
-                    return AdvancedMath.sub(Integer.valueOf(xOfChar), cutArray(i,arr) );
-                }
 
 
 
-
-            }
-
-
-
+        return 0;
+    }
+    public static boolean isNamber(char x){
+        if (x == '0' || x == '1' || x == '2' || x == '3' || x == '4' || x == '5' || x == '6' || x == '7' || x == '8' || x == '9' ){
+            return true;
         }
-        return Integer.valueOf(xOfChar);
-
-
-
+        else return false;
     }
 
-    public static char[] cutArray(int i, char[] arr){
-            int lenght = (arr.length) - ++i;
-            if (lenght <=1)return new char[arr[0]];
-            char[] newArr = new char[lenght] ;
+    public static List<Token> makeTokenList(char[] arr){
+        LinkedList<Token> list = new LinkedList<>();
+        String boffer = "";
 
-            for (int j = 0; j < newArr.length; j++) {
-                newArr[j] = arr[i];
+
+        for (int i = 0; i < arr.length; i++) {
+
+
+            while (i<arr.length  && isNamber(arr[i]) ){
+                boffer += arr[i];
                 i++;
             }
-            return newArr;
+
+            if (!boffer.isEmpty()){
+                list.add(new Token(Integer.valueOf(boffer), '#'));
+                boffer = "";}
+
+            if (i<arr.length  &&  !isNamber(arr[i])){
 
 
-//        }catch (IndexOutOfBoundsException e ){
-//            return new char[arr[0]];
-//        }
+                switch (arr[i]){
+                    case '+':
+                        list.add(new Token(0,'+'));
+                        break;
+                    case '-':
+                        list.add(new Token(0,'-'));
+                        break;
+                    case '×':
+                        list.add(new Token(0,'×'));
+                        break;
+                    case '÷':
+                        list.add(new Token(0,'÷'));
+                        break;
+                    case '*':
+                        list.add(new Token(0,'×'));
+                        break;
+                    case '/':
+                        list.add(new Token(0,'÷'));
+                        break;
+                    case '(':
+                        list.add(new Token(0,'('));
+                        break;
+                    case ')':
+                        list.add(new Token(0,')'));
+                        break;
+                    case '^':
+                        list.add(new Token(0,')'));
+                        break;
+                    case 'π':
+                        list.add(new Token(0,'π'));
+                        break;
+                }
+
+            }
+        }
+        if (!boffer.isEmpty()){
+            int value = Integer.valueOf(boffer);
+            list.add(new Token(value, '#'));
+        }
+        return list;
+    }
+
+    public static Stack<List> convertTokenList(List<Token> list){
+        Stack<List> stack = new Stack<>();
+        Stack<Character> part = new Stack<>();
+        List<Token> mainList =new  LinkedList<>();
+        List<Token> interList =new  LinkedList<>();
+
+        boolean inParenteses = false;
+        for (int i = 0; i < list.size(); i++) {
+            if (list.get(i).getType() == '(' || inParenteses){
+
+                while (inParenteses){
+                    interList.add(list.get(i));
+                }
+                inParenteses = true;
+                part.push('(');
+            }
+
+                mainList.add(list.get(i));
+        }
 
 
-
+        return  stack;
     }
 
 }

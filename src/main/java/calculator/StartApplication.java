@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javax.script.*;
 
 import java.io.IOException;
 
@@ -18,8 +19,12 @@ public class StartApplication extends Application {
     }
 
     public static void main(String[] args) {
-        launch();
-//        String s = "2+2+2+";
-//        System.out.println(Lexer.callmethods(s.toCharArray()));
+//        launch();
+        String s = "2+2(10(3*4)+(-10))";
+        System.out.println(Lexer.makeTokenList(s.toCharArray()));
+
+
+
     }
+
 }

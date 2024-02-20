@@ -1,4 +1,5 @@
 package calculator.controllers;
+import calculator.AdvancedMath;
 import calculator.Lexer;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -111,12 +112,34 @@ public class Controller {
         sub.setOnAction(event -> {
             setInput("-");
         });
+        multiply.setOnAction(event -> {
+            setInput("×");
+        });
+        divide.setOnAction(event -> {
+            setInput("÷");
+        });
+        c.setOnAction(event -> {
+            input.setText(null);
+        });
+        open_parentheses.setOnAction(event -> {
+            setInput("(-)");
+        });
+        close_parentheses.setOnAction(event -> {
+            setInput(")");
+        });
+        backSpace.setOnAction(event -> {
+            String s = input.getText();
+            input.setText(s.substring(0,s.length()-1));
+        });
+        comma.setOnAction(event -> {
+            setInput(",");
+        });
 
 
         equal.setOnAction(event -> {
-            char[] arr = input.getText().toCharArray();
 
-            output.setText(String.valueOf(Lexer.callmethods(arr)));
+
+            output.setText(String.valueOf( AdvancedMath.expresion(input.getText())));
             ;
         });
 
