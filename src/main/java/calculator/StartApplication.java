@@ -21,8 +21,8 @@ public class StartApplication extends Application {
     public static void main(String[] args) {
 //        launch();
         String s = "2+2(10(3*4)+(-10))";
-        System.out.println(Lexer.makeTokenList(s.toCharArray()));
-
+        //System.out.println(Lexer.convertTokenList(Lexer.makeTokenList(s.toCharArray())));
+        System.out.println(Lexer.upGrateTokenListOnMultiply(Lexer.makeTokenList(s.toCharArray())));
 
 
     }

@@ -88,22 +88,44 @@ public class Lexer {
         List<Token> mainList =new  LinkedList<>();
         List<Token> interList =new  LinkedList<>();
 
-        boolean inParenteses = false;
-        for (int i = 0; i < list.size(); i++) {
-            if (list.get(i).getType() == '(' || inParenteses){
+        //[[2#], [0+], [2#], [0(], [10#], [0(], [3#], [0×], [4#], [0)], [0+], [0(], [0-], [10#], [0)], [0)]]
+        //2+2(10(3*4)+(-10))
 
-                while (inParenteses){
-                    interList.add(list.get(i));
-                }
-                inParenteses = true;
+
+        for (int i = 0; i < list.size(); i++) {
+            if (list.get(i).getType() == '('){
                 part.push('(');
+                mainList.add(new Token(0,'@'));
+
+                while (!part.isEmpty() && i < list.size()){
+                    interList.add(list.get(i));
+                    if (list.get(i).getType() == ')'){
+                        part.pop();
+                    }
+                    i++;
+                }
+
             }
 
                 mainList.add(list.get(i));
+                //зробить рекурсію яка буде добавлять в стек
         }
+        stack.push(mainList);
 
 
         return  stack;
+    }
+    public static List<Token> upGrateTokenListOnMultiply(List<Token> list) {
+        List<Token> newTokenList = new LinkedList<>();
+//        2+2(10(3*4)+(-10))
+        for (int i = 0; i < list.size(); i++) {
+            if (list.get(i).getType() == '#' && (list.get(i+1).getType() =='(' || list.get(i+1).getType() =='π')){
+                newTokenList.add(list.get(i));
+                newTokenList.add(new Token(0,'×'));
+            }
+            else newTokenList.add(list.get(i));
+        }
+        return newTokenList;
     }
 
 }
