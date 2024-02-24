@@ -1,6 +1,5 @@
 package calculator;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Stack;
@@ -8,9 +7,6 @@ import java.util.Stack;
 public class Lexer {
 
     public static int callmethods(char[] arr){
-
-
-
         return 0;
     }
     public static boolean isNamber(char x){
@@ -82,7 +78,7 @@ public class Lexer {
         return list;
     }
 
-    public static Stack<List> convertTokenList(List<Token> list){
+    public static Stack<List> convertTokenListToStackList(List<Token> list){
         Stack<List> stack = new Stack<>();
         Stack<Character> part = new Stack<>();
         List<Token> mainList =new  LinkedList<>();
@@ -91,26 +87,43 @@ public class Lexer {
         //[[2#], [0+], [2#], [0(], [10#], [0(], [3#], [0×], [4#], [0)], [0+], [0(], [0-], [10#], [0)], [0)]]
         //2+2(10(3*4)+(-10))
 
-
+            //2(2+2-(100-9)) + 1
         for (int i = 0; i < list.size(); i++) {
+
             if (list.get(i).getType() == '('){
                 part.push('(');
+
                 mainList.add(new Token(0,'@'));
 
                 while (!part.isEmpty() && i < list.size()){
-                    interList.add(list.get(i));
+
+//                    if (list.get(i).getType() == '('){
+//                        part.push('(');
+//                    }
                     if (list.get(i).getType() == ')'){
                         part.pop();
                     }
+                    interList.add(list.get(i));
+                    if (i==11){
+                        System.out.println("Debug");
+                    }
+
                     i++;
                 }
 
             }
 
-                mainList.add(list.get(i));
+                try {
+                    mainList.add(list.get(i));
+                }catch (IndexOutOfBoundsException e){
+                    System.out.println("Lexer.convertTokenListToStackList 115 exeption");
+                }
                 //зробить рекурсію яка буде добавлять в стек
         }
         stack.push(mainList);
+
+
+//        stack.push(convertTokenListToStackList(interList));
 
 
         return  stack;
@@ -119,13 +132,55 @@ public class Lexer {
         List<Token> newTokenList = new LinkedList<>();
 //        2+2(10(3*4)+(-10))
         for (int i = 0; i < list.size(); i++) {
-            if (list.get(i).getType() == '#' && (list.get(i+1).getType() =='(' || list.get(i+1).getType() =='π')){
+            try {
                 newTokenList.add(list.get(i));
-                newTokenList.add(new Token(0,'×'));
+                if (list.get(i).getType() == '#' && (list.get(i+1).getType() =='(' || list.get(i+1).getType() =='π')){
+//                    newTokenList.add(i,list.get(i));
+                    newTokenList.add(new Token(0,'×'));
+                }
+
+
+            }catch (IndexOutOfBoundsException e){
+                System.out.println("upGrateTokenListOnMultiply вийшов за межі масиву це норм");
             }
-            else newTokenList.add(list.get(i));
+
         }
         return newTokenList;
+    }
+
+    public static List<Token> slice(List<Token> list){
+        List<Token> inner = new LinkedList<>();
+        int volume = 0;
+        for (int i = 0; i < list.size(); i++) {
+            if (list.get(i).getType() == '('){
+                volume++;
+                i++;
+                while (volume !=0){
+                    if (list.get(i).getType() ==')'){
+                        volume--;
+                    }
+                    if (list.get(i).getType() =='('){
+                        volume++;
+                    }
+                    if (volume != 0) {
+                        inner.add(list.get(i));
+                    }
+                    i++;
+                }
+                return inner;
+            }
+
+        }
+        return null;
+    }
+    public static boolean parenthesesAreEqual(List<Token> list){
+        int valueOfOpen = 0;
+        int valueOfClose = 0;
+        for (int i = 0; i < list.size(); i++) {
+            if (list.get(i).getType() == '(')valueOfOpen++;
+            if (list.get(i).getType() == ')')valueOfClose++;
+        }
+        return valueOfOpen==valueOfClose;
     }
 
 }

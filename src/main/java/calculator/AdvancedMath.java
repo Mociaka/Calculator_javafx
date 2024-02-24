@@ -2,20 +2,14 @@ package calculator;
 import javax.script.ScriptEngineManager;
 import javax.script.ScriptEngine;
 import javax.script.ScriptException;
+import java.util.List;
+import java.util.Stack;
 
 
 public class AdvancedMath {
 
-
-    static ScriptEngineManager mgr = new ScriptEngineManager();
-    static ScriptEngine engine = mgr.getEngineByName("JavaScript");
-
-    public static long expresion(String s){
-        try {
-            return (long) engine.eval(s);
-        } catch (ScriptException e) {
-            throw new RuntimeException(e);
-        }
+    public static Stack<List> expresion(String s){
+       return Lexer.convertTokenListToStackList(Lexer.upGrateTokenListOnMultiply(Lexer.makeTokenList(s.toCharArray())));
 
     }
 

@@ -19,6 +19,9 @@ public class Token {
 
     @Override
     public String toString(){
-        return ("[" + value + type + "]");
+        String s = "";
+        if (type =='#') s+=value;
+        else s+=type;
+        return s;
     }
 }

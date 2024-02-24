@@ -5,9 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="843ee075-fb26-4b0e-b953-172de7605032" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/calculator/AdvancedMath.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/calculator/AdvancedMath.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/calculator/Lexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/calculator/Lexer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/calculator/StartApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/calculator/StartApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/calculator/Token.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/calculator/Token.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +58,8 @@
   </component>
   <component name="RunManager">
     <configuration name="StartApplication" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="11" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="calculator.StartApplication" />
       <module name="calculator" />
       <method v="2">
@@ -78,7 +83,9 @@
       <workItem from="1708332096706" duration="12000" />
       <workItem from="1708345405231" duration="3178000" />
       <workItem from="1708448938468" duration="7327000" />
-      <workItem from="1708501788888" duration="2339000" />
+      <workItem from="1708501788888" duration="9947000" />
+      <workItem from="1708607545145" duration="11000" />
+      <workItem from="1708780564453" duration="3016000" />
     </task>
     <servers />
   </component>
@@ -113,8 +120,18 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/calculator/Lexer.java</url>
-          <line>115</line>
-          <option name="timeStamp" value="6" />
+          <line>107</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/calculator/Lexer.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/calculator/Lexer.java</url>
+          <line>131</line>
+          <option name="timeStamp" value="21" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
