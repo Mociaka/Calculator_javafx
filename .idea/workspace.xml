@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="843ee075-fb26-4b0e-b953-172de7605032" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/calculator/AdvancedMath.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/calculator/AdvancedMath.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/calculator/Lexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/calculator/Lexer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/calculator/StartApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/calculator/StartApplication.java" afterDir="false" />
@@ -56,7 +56,7 @@
       <recent name="C:\Users\user\IdeaProjects\calculator\src\main\resources\calculator" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.StartApplication">
     <configuration name="StartApplication" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="11" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -66,6 +66,94 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="LexerTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="calculator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="calculator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="calculator" />
+      <option name="MAIN_CLASS_NAME" value="calculator.LexerTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LexerTests.cut" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="calculator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="calculator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="calculator" />
+      <option name="MAIN_CLASS_NAME" value="calculator.LexerTests" />
+      <option name="METHOD_NAME" value="cut" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LexerTests.divedByZero" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="calculator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="calculator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="calculator" />
+      <option name="MAIN_CLASS_NAME" value="calculator.LexerTests" />
+      <option name="METHOD_NAME" value="divedByZero" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LexerTests.makeTokenList2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="calculator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="calculator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="calculator" />
+      <option name="MAIN_CLASS_NAME" value="calculator.LexerTests" />
+      <option name="METHOD_NAME" value="makeTokenList2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LexerTests.upGrateTokenListNegativeNumbers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="calculator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="calculator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="calculator" />
+      <option name="MAIN_CLASS_NAME" value="calculator.LexerTests" />
+      <option name="METHOD_NAME" value="upGrateTokenListNegativeNumbers" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.LexerTests.makeTokenList2" />
+        <item itemvalue="JUnit.LexerTests.cut" />
+        <item itemvalue="JUnit.LexerTests" />
+        <item itemvalue="JUnit.LexerTests.upGrateTokenListNegativeNumbers" />
+        <item itemvalue="JUnit.LexerTests.divedByZero" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -85,7 +173,12 @@
       <workItem from="1708448938468" duration="7327000" />
       <workItem from="1708501788888" duration="9947000" />
       <workItem from="1708607545145" duration="11000" />
-      <workItem from="1708780564453" duration="3016000" />
+      <workItem from="1708780564453" duration="5243000" />
+      <workItem from="1708785820767" duration="381000" />
+      <workItem from="1708851093306" duration="1302000" />
+      <workItem from="1708879494316" duration="1398000" />
+      <workItem from="1708945856310" duration="1202000" />
+      <workItem from="1709134548012" duration="13434000" />
     </task>
     <servers />
   </component>
@@ -120,18 +213,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/calculator/Lexer.java</url>
-          <line>107</line>
+          <line>108</line>
           <option name="timeStamp" value="19" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/calculator/Lexer.java</url>
-          <line>19</line>
-          <option name="timeStamp" value="20" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/calculator/Lexer.java</url>
-          <line>131</line>
-          <option name="timeStamp" value="21" />
+          <url>file://$PROJECT_DIR$/src/main/java/calculator/AdvancedMath.java</url>
+          <line>63</line>
+          <option name="timeStamp" value="29" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

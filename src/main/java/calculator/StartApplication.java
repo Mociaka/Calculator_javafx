@@ -19,14 +19,22 @@ public class StartApplication extends Application {
 
     public static void main(String[] args) {
 //        launch();
-        //String s = "2+2(10(3*4)+(-10))";
+//        String s = "2+2(10(3*4)+(-10))";////222  )(
 //        String s = "2(2+2-(100-9))+1 +1";
-        String s = "2(10(100*3))+(2*2)";
+        String s = "2(10(100*3))+(2*2)"; ////6004 )(
+//        String s = "2+2*5^3";           ////252 |/
+       // String s = "2+2*5^3^2";
+//        String s = "2+ 2 (3*4)";    ////26
+//        String s = "(2+2) (2+2)";
+
 //        System.out.println(Lexer.convertTokenListToStackList(Lexer.makeTokenList(s.toCharArray())));
         //System.out.println(Lexer.upGrateTokenListOnMultiply(Lexer.makeTokenList(s.toCharArray())));
+        //System.out.println(AdvancedMath.expresion(s));
+//        var v = );
+//        System.out.println(v);
+          //System.out.println(Lexer.convertTokenListToStackList2(Lexer.upGrateTokenListOnMultiply(Lexer.makeTokenList(s.toCharArray()))));
+//        System.out.println(v);
         System.out.println(AdvancedMath.expresion(s));
-        System.out.println(Lexer.slice(Lexer.upGrateTokenListOnMultiply(Lexer.makeTokenList(s.toCharArray()))));
-
     }
 
 }

@@ -1,10 +1,10 @@
 package calculator;
 
 public class Token {
-    public int value;
+    public long value;
     public char type;
 
-    public int getValue() {
+    public long getValue() {
         return value;
     }
 
@@ -12,8 +12,16 @@ public class Token {
         return type;
     }
 
-    public Token(int value, char type) {
+    public Token(long value, char type) {
         this.value = value;
+        this.type = type;
+    }
+
+    public void setValue(long value) {
+        this.value = value;
+    }
+
+    public void setType(char type) {
         this.type = type;
     }
 

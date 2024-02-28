@@ -1,38 +1,107 @@
 package calculator;
-import javax.script.ScriptEngineManager;
-import javax.script.ScriptEngine;
-import javax.script.ScriptException;
+
 import java.util.List;
 import java.util.Stack;
 
 
 public class AdvancedMath {
 
-    public static Stack<List> expresion(String s){
-       return Lexer.convertTokenListToStackList(Lexer.upGrateTokenListOnMultiply(Lexer.makeTokenList(s.toCharArray())));
+    public static long expresion(String s){
+       return AdvancedMath.cul(Lexer.upGrateTokenListOnMultiply(Lexer.upGrateTokenListNegativeNumbers(Lexer.makeTokenList(s.toCharArray()))));
 
     }
+    public static long cul(List<Token> list){
+        List<Token> internalList = Lexer.cut(list);
 
-    public static int add(int a, char[] arr){
-        return a + Lexer.callmethods(arr);
+        if (internalList !=null){
+
+            ////////////////////////////////////////////
+            for (int i = 0,nParenteses = 0; i < list.size(); i++) {
+                if (list.get(i).getType()=='('){
+                    nParenteses++;
+                    while (nParenteses!=0){
+                        list.remove(i);
+
+                        if (list.get(i).getType()=='(')nParenteses++;
+                        if (list.get(i).getType()==')')nParenteses--;
+                    }
+                    list.set(i,new Token(cul(internalList),'#'));
+                }
+            }
+
+            ////////////////////////////////////////////
+        }
+
+
+        for (int i = 0; i < list.size()-2; i++) {//пошук степення
+            if (list.get(i + 1).getType()=='^'){
+                list.get(i+2).setValue(pow(list.get(i).getValue(),list.get(i+2).getValue()));
+                list.remove(i);
+                list.remove(i);
+                i--;
+
+
+            }
+        }
+        for (int i = 0; i < list.size()-2; i++) {//пошук множення
+            if (list.get(i + 1).getType()=='×'){
+                list.get(i+2).setValue(mul(list.get(i).getValue(),list.get(i+2).getValue()));
+                list.remove(i);
+                list.remove(i);
+                i--;
+
+
+            }
+            if (list.get(i + 1).getType()=='÷'){
+                list.get(i+2).setValue(div(list.get(i).getValue(),list.get(i+2).getValue()));//кинуть ошика ділення на 0
+                list.remove(i);
+                list.remove(i);
+                i--;
+
+
+            }
+        }
+        for (int i = 0; i < list.size()-2; i++) {//пошук додавання
+            if (list.get(i + 1).getType()=='+'){
+                list.get(i+2).setValue(add(list.get(i).getValue(),list.get(i+2).getValue()));
+                list.remove(i);
+                list.remove(i);
+                i--;
+
+
+            }
+            if (list.get(i + 1).getType()=='-'){
+                list.get(i+2).setValue(sub(list.get(i).getValue(),list.get(i+2).getValue()));
+                list.remove(i);
+                list.remove(i);
+                i--;
+
+
+            }
+        }
+
+
+        return list.get(0).getValue();
+    }
+
+    public static long add(long a, long b){
+        return a + b;
     }
 
 
-    public static int sub(int a, char[] arr){
-        return  a - Lexer.callmethods(arr);
+    public static long sub(long a, long b){
+        return  a - b;
     }
-    public static long mul(long a, char[] arr){
-        return 0;
+    public static long mul(long a, long b){
+        return a*b;
     }
-    public static long div(long a, char[] arr){
-        return 0;
+    public static long div(long a, long b){
+        return a/b;
     }
-    public static long pow(long a, char[] arr){
-        return 0;
+    public static long pow(long a, long b){
+        return (long) Math.pow(a,b);
     }
-    public static long root(long a, char[] arr){
-        return 0;
-    }
+
 }
 
 //перетворити input но 2 прості компоненти
