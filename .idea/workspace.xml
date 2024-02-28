@@ -21,18 +21,7 @@
       </list>
     </option>
   </component>
-  <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="wrongCalculator" />
-  </component>
-  <component name="Git.Rebase.Settings">
-    <option name="NEW_BASE" value="wrongCalculator" />
-  </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="main" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectColorInfo">{
@@ -50,7 +39,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;wrongCalculator&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;loop__and__token&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -155,9 +144,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.LexerTests" />
         <item itemvalue="JUnit.LexerTests.makeTokenList2" />
         <item itemvalue="JUnit.LexerTests.cut" />
+        <item itemvalue="JUnit.LexerTests" />
         <item itemvalue="JUnit.LexerTests.upGrateTokenListNegativeNumbers" />
         <item itemvalue="JUnit.LexerTests.divedByZero" />
       </list>
@@ -187,18 +176,7 @@
       <workItem from="1708879494316" duration="1398000" />
       <workItem from="1708945856310" duration="1202000" />
       <workItem from="1709134548012" duration="13434000" />
-      <workItem from="1709197909670" duration="103000" />
-      <workItem from="1709199533811" duration="2076000" />
     </task>
-    <task id="LOCAL-00001" summary="calcucaot work but wrong">
-      <option name="closed" value="true" />
-      <created>1709199744852</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1709199744852</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -227,22 +205,18 @@
       </map>
     </option>
   </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="calcucaot work but wrong" />
-    <option name="LAST_COMMIT_MESSAGE" value="calcucaot work but wrong" />
-  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/calculator/AdvancedMath.java</url>
-          <line>68</line>
-          <option name="timeStamp" value="29" />
+          <url>file://$PROJECT_DIR$/src/main/java/calculator/Lexer.java</url>
+          <line>108</line>
+          <option name="timeStamp" value="19" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/calculator/AdvancedMath.java</url>
-          <line>16</line>
-          <option name="timeStamp" value="30" />
+          <line>63</line>
+          <option name="timeStamp" value="29" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
