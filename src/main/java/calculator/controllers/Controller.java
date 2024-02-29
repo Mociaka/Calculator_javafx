@@ -73,6 +73,15 @@ public class Controller {
     private Button zero;
 
     @FXML
+    private Button pow;
+
+    @FXML
+    private Button un_pow;
+
+    @FXML
+    private Button pi;
+
+    @FXML
     void initialize() {
 
         zero.setOnAction(event -> {
@@ -133,6 +142,15 @@ public class Controller {
         });
         comma.setOnAction(event -> {
             setInput(",");
+        });
+        pow.setOnAction(event ->{
+            setInput("^");
+        });
+        un_pow.setOnAction(event ->{
+            setInput("^(");
+        });
+        pi.setOnAction(event ->{
+            setInput("π");
         });
 
 
