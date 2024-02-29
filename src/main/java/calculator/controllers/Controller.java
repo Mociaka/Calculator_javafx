@@ -122,7 +122,7 @@ public class Controller {
             input.setText(null);
         });
         open_parentheses.setOnAction(event -> {
-            setInput("(-)");
+            setInput("(");
         });
         close_parentheses.setOnAction(event -> {
             setInput(")");
