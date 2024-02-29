@@ -6,8 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="843ee075-fb26-4b0e-b953-172de7605032" name="Changes" comment="calcucaot work but wrong">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/calculator/controllers/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/calculator/controllers/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/calculator/calculator-tiny-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/calculator/calculator-tiny-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/calculator/AdvancedMath.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/calculator/AdvancedMath.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/calculator/StartApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/calculator/StartApplication.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -188,7 +188,7 @@
       <workItem from="1708945856310" duration="1202000" />
       <workItem from="1709134548012" duration="13434000" />
       <workItem from="1709197909670" duration="103000" />
-      <workItem from="1709199533811" duration="702000" />
+      <workItem from="1709199533811" duration="2076000" />
     </task>
     <task id="LOCAL-00001" summary="calcucaot work but wrong">
       <option name="closed" value="true" />
@@ -235,14 +235,14 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/calculator/Lexer.java</url>
-          <line>108</line>
-          <option name="timeStamp" value="19" />
+          <url>file://$PROJECT_DIR$/src/main/java/calculator/AdvancedMath.java</url>
+          <line>68</line>
+          <option name="timeStamp" value="29" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/calculator/AdvancedMath.java</url>
-          <line>63</line>
-          <option name="timeStamp" value="29" />
+          <line>16</line>
+          <option name="timeStamp" value="30" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

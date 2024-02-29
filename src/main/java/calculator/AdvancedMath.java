@@ -7,17 +7,21 @@ import java.util.Stack;
 public class AdvancedMath {
 
     public static long expresion(String s){
-       return AdvancedMath.cul(Lexer.upGrateTokenListOnMultiply(Lexer.upGrateTokenListNegativeNumbers(Lexer.makeTokenList(s.toCharArray()))));
+       return AdvancedMath.cul(
+               Lexer.upGrateTokenListOnMultiply(
+                       Lexer.upGrateTokenListNegativeNumbers(
+                               Lexer.makeTokenList(s.toCharArray()))));
 
     }
     public static long cul(List<Token> list){
-        List<Token> internalList = Lexer.cut(list);
 
-        if (internalList !=null){
+
+        if (Lexer.cut(list) !=null){
 
             ////////////////////////////////////////////
             for (int i = 0,nParenteses = 0; i < list.size(); i++) {
                 if (list.get(i).getType()=='('){
+                    List<Token> internalList =Lexer.cut(list) ;
                     nParenteses++;
                     while (nParenteses!=0){
                         list.remove(i);
