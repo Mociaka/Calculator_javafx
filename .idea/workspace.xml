@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="843ee075-fb26-4b0e-b953-172de7605032" name="Changes" comment="calcucaot work but wrong" />
+    <list default="true" id="843ee075-fb26-4b0e-b953-172de7605032" name="Changes" comment="calcucaot work but wrong">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/calculator/AdvancedMath.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/calculator/AdvancedMath.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/calculator/Lexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/calculator/Lexer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/calculator/StartApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/calculator/StartApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/calculator/TXT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/calculator/exceptions/DivByZeroException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/calculator/AdvancedMathTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/calculator/AdvancedMathTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -177,6 +185,8 @@
       <workItem from="1709134548012" duration="13434000" />
       <workItem from="1709206266792" duration="1305000" />
       <workItem from="1709368998935" duration="4382000" />
+      <workItem from="1709385492722" duration="226000" />
+      <workItem from="1709403559843" duration="738000" />
     </task>
     <servers />
   </component>
@@ -205,26 +215,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/calculator/Lexer.java</url>
-          <line>111</line>
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/calculator/Lexer.java</url>
-          <line>282</line>
-          <option name="timeStamp" value="32" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/calculator/AdvancedMath.java</url>
-          <line>80</line>
-          <option name="timeStamp" value="36" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
