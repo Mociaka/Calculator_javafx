@@ -81,7 +81,7 @@ public class Lexer {
     public static List<Token> upGrateTokenListOnMultiply(List<Token> list) {
         List<Token> newTokenList = new LinkedList<>();
 
-        for (int i = 0; i < list.size(); i++) {
+        for (int i = 0; i < list.size() ; i++) {
             try {
                 newTokenList.add(list.get(i));
                 if ((list.get(i).getType() == '#' || list.get(i).getType() == ')') && (list.get(i+1).getType() =='(' || list.get(i+1).getType() =='π') ){
@@ -91,7 +91,7 @@ public class Lexer {
 
 
             }catch (IndexOutOfBoundsException e){
-                System.out.println("upGrateTokenListOnMultiply вийшов за межі масиву це норм");
+
             }
 
         }

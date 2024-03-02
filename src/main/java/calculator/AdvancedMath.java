@@ -16,8 +16,6 @@ public class AdvancedMath {
                                     Lexer.upGrateTokenListNegativeNumbers(
                                            Lexer.makeTokenList(s.toCharArray()))))));
 
-
-
     }
     public static String expresionToString(String s) {
         double value = 0;
@@ -26,9 +24,9 @@ public class AdvancedMath {
         } catch (VolumeOfParenthesesException e) {
             return "Перевірьте кількість дужок";
         }
-        catch (Exception e) {
-            return "Exception";
-        }
+//        catch (Exception e) {
+//            return "Exception";
+//        }
 
 
         return String.valueOf(value);
