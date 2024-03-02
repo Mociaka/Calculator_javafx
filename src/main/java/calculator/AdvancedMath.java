@@ -1,19 +1,41 @@
 package calculator;
 
+import calculator.exceptions.DivByZeroException;
+import calculator.exceptions.VolumeOfParenthesesException;
+
 import java.util.List;
-import java.util.Stack;
 
 
 public class AdvancedMath {
 
-    public static long expresion(String s){
-       return AdvancedMath.cul(
-               Lexer.upGrateTokenListOnMultiply(
-                       Lexer.upGrateTokenListNegativeNumbers(
-                               Lexer.makeTokenList(s.toCharArray()))));
+    public static double expresion(String s) throws VolumeOfParenthesesException, DivByZeroException {
+        return AdvancedMath.cul(
+                Lexer.upGrateTokenListOnMultiply(
+                        Lexer.rePlacePiOnValue(
+                                Lexer.upGrateTokenListOnPi(
+                                    Lexer.upGrateTokenListNegativeNumbers(
+                                           Lexer.makeTokenList(s.toCharArray()))))));
+
+
 
     }
-    public static long cul(List<Token> list){
+    public static String expresionToString(String s) {
+        double value = 0;
+        try {
+            value = expresion(s);
+        } catch (VolumeOfParenthesesException e) {
+            return "Перевірьте кількість дужок";
+        }catch (DivByZeroException e){
+            return "Ділення на 0";
+        }
+//        catch (Exception e) {
+//            return "Exception";
+//        }
+
+
+        return String.valueOf(value);
+    }
+    public static double cul(List<Token> list) throws DivByZeroException{
 
 
         if (Lexer.cut(list) !=null){
@@ -57,6 +79,9 @@ public class AdvancedMath {
 
             }
             if (list.get(i + 1).getType()=='÷'){
+//                if (list.get(i).getValue() == 0.0 || list.get(i+1).getValue() == 0){
+//                    throw new DivByZeroException();
+//                }
                 list.get(i+2).setValue(div(list.get(i).getValue(),list.get(i+2).getValue()));//кинуть ошика ділення на 0
                 list.remove(i);
                 list.remove(i);
@@ -88,22 +113,20 @@ public class AdvancedMath {
         return list.get(0).getValue();
     }
 
-    public static long add(long a, long b){
+    public static double add(double a, double b){
         return a + b;
     }
-
-
-    public static long sub(long a, long b){
+    public static double sub(double a, double b){
         return  a - b;
     }
-    public static long mul(long a, long b){
-        return a*b;
+    public static double mul(double a, double b){
+        return a * b;
     }
-    public static long div(long a, long b){
-        return a/b;
+    public static double div(double a, double b){
+        return a / b;
     }
-    public static long pow(long a, long b){
-        return (long) Math.pow(a,b);
+    public static double pow(double a, double b){
+        return Math.pow(a,b);
     }
 
 }

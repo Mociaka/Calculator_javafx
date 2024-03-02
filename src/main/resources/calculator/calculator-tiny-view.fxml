@@ -10,7 +10,7 @@
          <font>
             <Font size="18.0" />
          </font></Button>
-      <Button fx:id="comma" layoutX="168.0" layoutY="539.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="59.0" style="-fx-background-color: a9a9a9;" text=",">
+      <Button fx:id="comma" layoutX="168.0" layoutY="539.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="59.0" style="-fx-background-color: a9a9a9;" text=".">
          <font>
             <Font size="20.0" />
          </font>

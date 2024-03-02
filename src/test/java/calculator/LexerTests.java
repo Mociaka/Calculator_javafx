@@ -1,5 +1,6 @@
 package calculator;
 
+import calculator.exceptions.VolumeOfParenthesesException;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -37,7 +38,7 @@ class LexerTests {
 
      }
     @Test
-    void makeTokenList2(){
+    void makeTokenList2() throws VolumeOfParenthesesException {
         String s = "(2+2) (2+2)";
         List<Token> myListTokens  = new LinkedList<>();
         myListTokens.add(new Token(0, '('));
@@ -92,7 +93,7 @@ class LexerTests {
        Assertions.assertThrows(ArithmeticException.class, () -> Math.floorDiv(10,0));
      }
      @Test
-      void upGrateTokenListNegativeNumbers(){
+      void upGrateTokenListNegativeNumbers() throws VolumeOfParenthesesException {
         String s ="-2(-1)+-1";//в началі, в дужках, після знака
          List<Token> list = Lexer.upGrateTokenListNegativeNumbers(Lexer.makeTokenList(s.toCharArray()));
         List<Token> myListTokens  = new LinkedList<>();

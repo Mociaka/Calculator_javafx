@@ -1,5 +1,7 @@
 package calculator;
 
+import calculator.exceptions.VolumeOfParenthesesException;
+
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -11,13 +13,14 @@ public class Lexer {
         return 0;
     }
     public static boolean isNamber(char x){
-        if (x == '0' || x == '1' || x == '2' || x == '3' || x == '4' || x == '5' || x == '6' || x == '7' || x == '8' || x == '9' ){
+        if (x == '0' || x == '1' || x == '2' || x == '3' || x == '4' || x == '5' || x == '6' || x == '7' || x == '8' || x == '9' || x == '.' || x == ',' ){
             return true;
         }
         else return false;
     }
 
-    public static List<Token> makeTokenList(char[] arr){
+    public static List<Token> makeTokenList(char[] arr) {
+
         LinkedList<Token> list = new LinkedList<>();
         String boffer = "";
 
@@ -31,7 +34,7 @@ public class Lexer {
             }
 
             if (!boffer.isEmpty()){
-                list.add(new Token(Integer.valueOf(boffer), '#'));
+                list.add(new Token(Double.valueOf(boffer), '#'));
                 boffer = "";}
 
             if (i<arr.length  &&  !isNamber(arr[i])){
@@ -73,7 +76,7 @@ public class Lexer {
             }
         }
         if (!boffer.isEmpty()){
-            int value = Integer.valueOf(boffer);
+            double value = Double.valueOf(boffer);
             list.add(new Token(value, '#'));
         }
         return list;
@@ -119,7 +122,7 @@ public class Lexer {
                 }catch (IndexOutOfBoundsException e){
                     System.out.println("Lexer.convertTokenListToStackList 115 exeption");
                 }
-                //зробить рекурсію яка буде добавлять в стек
+
         }
         stack.push(mainList);
 
@@ -217,7 +220,7 @@ public class Lexer {
     }
 
     public static class TwoListInOne {
-         List<Token> inner;
+        List<Token> inner;
         List<Integer> willDelete;
         public TwoListInOne(List<Token> inner, List<Integer> willDelete) {
             this.inner = inner;
@@ -254,21 +257,44 @@ public class Lexer {
 
     }
 
-    public static List<Token> upGrateTokenListNegativeNumbers(List<Token> list) {
+    public static List<Token> upGrateTokenListNegativeNumbers(List<Token> list) throws VolumeOfParenthesesException {
+        if (!parenthesesAreEqual(list)){
+            throw new VolumeOfParenthesesException();
+        }
         int i = 0;
         if (list.size() <=1){return list;}
         if ( ( list.get(i).getType()=='-' ||  list.get(i).getType()=='+') && list.get(i+1).getType()=='#'){
             if (list.get(i).getType() =='-'){
 
-                list.get(i+1).setValue(Math.negateExact(list.get(i+1).getValue()));
+                list.get(i+1).setValue(-list.get(i+1).getValue());
                 list.remove(i);
                 i=1;
             }
         }
         for (; i < list.size() - 2; i++) {
             if (list.get(i).getType() !='#' && (list.get(i+1).getType() =='-' || list.get(i+1).getType() =='+') && list.get(i+2).getType() =='#' ){
-                list.get(i+2).setValue(Math.negateExact(list.get(i+2).getValue()));
+                list.get(i+2).setValue(-list.get(i+1).getValue() );
                 list.remove(i+1);
+            }
+        }
+        return list;
+    }
+    public static List<Token> upGrateTokenListOnPi(List<Token> list) {
+        //2π,π(,)π,π10
+        for (int i = 1; i < list.size(); i++) {
+            if ((list.get(i-1).getType()=='#' || list.get(i-1).getType()==')' ) && list.get(i).getType()=='π'){
+                list.add(i,new Token(0,'×'));
+            }
+            if ((list.get(i).getType()=='#' || list.get(i).getType()=='(' ) && list.get(i-1).getType()=='π'){
+                list.add(i,new Token(0,'×'));
+            }
+        }
+        return list;
+    }
+    public static List<Token> rePlacePiOnValue(List<Token> list){
+        for (int i = 0; i < list.size(); i++) {
+            if (list.get(i).getType() == 'π'){
+                list.set(i, new Token( 3.14159265359,'#')) ;
             }
         }
         return list;

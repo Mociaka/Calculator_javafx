@@ -7,6 +7,8 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+import static calculator.AdvancedMath.expresionToString;
+
 public class StartApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
@@ -19,6 +21,7 @@ public class StartApplication extends Application {
 
     public static void main(String[] args) {
         launch();
+
        // String s = "2+2(10(3*4)+(-10))";////222  |/
 //        String s = "2(2+2-(100-9))+1 +1";
 //        String s = "2(10(100*3))+(2*2)"; ////6004 |/
@@ -26,6 +29,8 @@ public class StartApplication extends Application {
        // String s = "2+2*5^3^2";
 //        String s = "2+ 2 (3*4)";    ////26
 //        String s = "(2+2) (2+2)";
+//        String s = "2π + )π + π10 + π(";
+        //String s = "5/0";
 
 //        System.out.println(Lexer.convertTokenListToStackList(Lexer.makeTokenList(s.toCharArray())));
         //System.out.println(Lexer.upGrateTokenListOnMultiply(Lexer.makeTokenList(s.toCharArray())));
@@ -35,6 +40,9 @@ public class StartApplication extends Application {
           //System.out.println(Lexer.convertTokenListToStackList2(Lexer.upGrateTokenListOnMultiply(Lexer.makeTokenList(s.toCharArray()))));
 //        System.out.println(v);
         //System.out.println(AdvancedMath.expresion(s));
+//        System.out.println(Lexer.upGrateTokenListOnPi(Lexer.upGrateTokenListOnMultiply(Lexer.makeTokenList(s.toCharArray())))) ;
+//        System.out.println("/////////////////");
+//        System.out.println(expresionToString(s));
     }
 
 }

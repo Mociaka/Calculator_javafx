@@ -129,6 +129,7 @@ public class Controller {
         });
         c.setOnAction(event -> {
             input.setText(null);
+            output.setText(null);
         });
         open_parentheses.setOnAction(event -> {
             setInput("(");
@@ -141,13 +142,13 @@ public class Controller {
             input.setText(s.substring(0,s.length()-1));
         });
         comma.setOnAction(event -> {
-            setInput(",");
+            setInput(".");
         });
         pow.setOnAction(event ->{
             setInput("^");
         });
         un_pow.setOnAction(event ->{
-            setInput("^(");
+            setInput("^(1÷");
         });
         pi.setOnAction(event ->{
             setInput("π");
@@ -155,10 +156,7 @@ public class Controller {
 
 
         equal.setOnAction(event -> {
-
-
-            output.setText(String.valueOf( AdvancedMath.expresion(input.getText())));
-            ;
+            output.setText( AdvancedMath.expresionToString(input.getText()));
         });
 
 
