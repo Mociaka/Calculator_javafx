@@ -33,7 +33,7 @@ public class AdvancedMath {
     }
     public static double cul(List<Token> list){
 
-        System.out.println(list);
+
         if (Lexer.cut(list) !=null){
 
             for (int i = 0,nParenteses = 0; i < list.size(); i++) {
