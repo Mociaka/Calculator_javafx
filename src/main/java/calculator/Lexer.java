@@ -146,17 +146,20 @@ public class Lexer {
         if ( ( list.get(i).getType()=='-' ||  list.get(i).getType()=='+') && list.get(i+1).getType()=='#'){
             if (list.get(i).getType() =='-'){
 
+
                 list.get(i+1).setValue(-list.get(i+1).getValue());
                 list.remove(i);
                 i=1;
+
             }
         }
         for (; i < list.size() - 2; i++) {
-            if (list.get(i).getType() !='#' && (list.get(i+1).getType() =='-' || list.get(i+1).getType() =='+') && list.get(i+2).getType() =='#' ){
-                list.get(i+2).setValue(-list.get(i+1).getValue() );
+            if (list.get(i).getType() !='#' && (list.get(i+1).getType() =='-' ) && list.get(i+2).getType() =='#' ){
+                list.get(i+2).setValue(-list.get(i+2).getValue() );
                 list.remove(i+1);
             }
         }
+
         return list;
     }
     public static List<Token> upGrateTokenListOnPi(List<Token> list) {

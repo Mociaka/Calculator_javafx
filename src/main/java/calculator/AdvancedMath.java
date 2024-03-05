@@ -24,16 +24,16 @@ public class AdvancedMath {
         } catch (VolumeOfParenthesesException e) {
             return "Перевірьте кількість дужок";
         }
-//        catch (Exception e) {
-//            return "Exception";
-//        }
+        catch (Exception e) {
+            return "Exception";
+        }
 
 
         return String.valueOf(value);
     }
     public static double cul(List<Token> list){
 
-
+        System.out.println(list);
         if (Lexer.cut(list) !=null){
 
             for (int i = 0,nParenteses = 0; i < list.size(); i++) {
